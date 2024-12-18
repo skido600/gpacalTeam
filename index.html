@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPA Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;1,400&family=Inter:wght@100;400;700&family=Poppins:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="">
+    <main class="bg-[#D9F7FA] relative">
+      <nav class="flex items-center justify-between gap-x-8 px-6 py-2">
+        <div class="flex items-center gap-x-2">
+          <img
+            src="./img/plus-minus.png"
+            alt="Plus-Minus Icon"
+            class="w-[20px]"
+          />
+          <h1 class="md:text-[15px] text-[#152D58]">GPA Calculator</h1>
+        </div>
+        <div
+          id="board"
+          class="absolute md:relative bg-[#D9F7FA] z-10 bottom-0 h-screen md:h-auto top-[0] md:top-0 p-4 md:p-0 right-0 left-0 hidden md:block"
+        >
+          <div class="float-right mb-8 md:hidden">
+            <img
+              class="w-[30px] close"
+              src="./img/close_34dp_5F6368_FILL0_wght400_GRAD0_opsz40.svg"
+              alt=""
+            />
+          </div>
+          <ul class="md:flex items-center relative text-[14px] gap-x-5 mt-8 md:mt-0 z-10">
+            <li class="flex items-center">
+              Guides
+              <img
+                src="./img/arrow_drop_down_44dp_5F6368_FILL0_wght400_GRAD0_opsz48.svg"
+                alt="Dropdown Arrow"
+                class="w-[30px] ml-1"
+              />
+            </li>
+            <li class="flex items-center">
+              Teams
+              <img
+                src="./img/arrow_drop_down_44dp_5F6368_FILL0_wght400_GRAD0_opsz48.svg"
+                alt="Dropdown Arrow"
+                class="w-[30px] ml-1"
+              />
+            </li>
+          </ul>
+        </div>
+        <img class="md:hidden w-[30px] menu" src="./img/menu.svg" alt="" />
+      </nav>
+
+      <section class="px-6 md:flex items-center md:mt-[-3rem] mt-3">
+        <div>
+          <h1 class="text-3xl text-[#152D58]">GPA Scale</h1>
+          <p
+            class="text-[#5B6D8B] md:text-[15px] text-[13px] lg:w-[55%] md:w-[70%] mt-1"
+          >
+            Easily convert your letter grade or percentage grade to a 4-point
+            system with our easy to use GPA converter and handy GPA scale.
+          </p>
+        </div>
+        <div class="mt-[-4rem] md:mt-0">
+          <img
+            class="w-[400px] h-[400px] object-contain"
+            src="./img/—Pngtree—cartoon hand drawn friends dancing_5049413.png"
+            alt=""
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- GPA Table -->
+    <main
+      class="bg-[#F8F9FA] py-6 border border-[#152D58] m-3 z-0 px-2 absolute right-0 left-0 mt-[-2rem]
+    >
+      <div class="max-w-3xl mx-auto px-3 bg-[#F8F9FA]">
+        <table class="w-full table-auto border-collapse">
+          <thead>
+            <tr class="bg-[#F8F9FA] border-b border-[#F5F5F5]">
+              <th class="font-semibold text-[#152D58] text-[13px]">#</th>
+              <th class="font-semibold text-[#152D58] text-[13px]">
+                Course tittle
+              </th>
+              <th class="font-semibold text-[#152D58] text-[13px]">Credits</th>
+              <th class="font-semibold text-[#152D58] text-[13px]">Grade</th>
+            </tr>
+          </thead>
+          <tbody id="course-rows">
+            <!-- Rows will be added here dynamically -->
+          </tbody>
+        </table>
+
+        <button
+          onclick="addRow()"
+          class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+        >
+          Add Course
+        </button>
+      </div>
+    </main>
+    <script src="./js.js"></script>
+  </body>
+</html>
