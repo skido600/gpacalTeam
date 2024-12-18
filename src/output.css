@@ -578,6 +578,10 @@ video {
   top: 0;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -611,6 +615,10 @@ video {
   margin-top: 0.25rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -621,10 +629,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-\[-2rem\] {
-  margin-top: -2rem;
 }
 
 .mt-\[-4rem\] {
@@ -679,6 +683,22 @@ video {
   border-collapse: collapse;
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
 .items-center {
   align-items: center;
 }
@@ -700,10 +720,6 @@ video {
 .gap-x-8 {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
-}
-
-.rounded-\[10px\] {
-  border-radius: 10px;
 }
 
 .rounded-\[6px\] {
@@ -728,6 +744,11 @@ video {
   border-color: rgb(245 245 245 / var(--tw-border-opacity, 1));
 }
 
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+}
+
 .bg-\[\#152D58\] {
   --tw-bg-opacity: 1;
   background-color: rgb(21 45 88 / var(--tw-bg-opacity, 1));
@@ -743,6 +764,11 @@ video {
   background-color: rgb(248 249 250 / var(--tw-bg-opacity, 1));
 }
 
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -750,11 +776,6 @@ video {
 
 .p-4 {
   padding: 1rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .px-3 {
@@ -793,6 +814,10 @@ video {
 
 .text-\[14px\] {
   font-size: 14px;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
 }
 
 .font-semibold {
@@ -856,12 +881,28 @@ body {
     width: 70%;
   }
 
+  .md\:w-\[60\%\] {
+    width: 60%;
+  }
+
+  .md\:w-\[50\%\] {
+    width: 50%;
+  }
+
   .md\:p-0 {
     padding: 0px;
   }
 
   .md\:text-\[15px\] {
     font-size: 15px;
+  }
+
+  .md\:text-\[20px\] {
+    font-size: 20px;
+  }
+
+  .md\:text-\[30px\] {
+    font-size: 30px;
   }
 }
 

@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body class="">
+  <body>
     <main class="bg-[#D9F7FA] relative">
       <nav class="flex items-center justify-between gap-x-8 px-6 py-2">
         <div class="flex items-center gap-x-2">
@@ -25,7 +25,7 @@
         </div>
         <div
           id="board"
-          class="absolute md:relative bg-[#D9F7FA] z-10 bottom-0 h-screen md:h-auto top-[0] md:top-0 p-4 md:p-0 right-0 left-0 hidden md:block"
+          class="absolute md:relative bg-[#D9F7FA] z-10 bottom-0 h-screen md:h-auto top-0 md:top-0 p-4 md:p-0 right-0 left-0 hidden md:block"
         >
           <div class="float-right mb-8 md:hidden">
             <img
@@ -34,13 +34,15 @@
               alt=""
             />
           </div>
-          <ul class="md:flex items-center relative text-[14px] gap-x-5 mt-8 md:mt-0 z-10">
+          <ul
+            class="md:flex items-center relative text-[14px] gap-x-5 mt-8 md:mt-0 z-10"
+          >
             <li class="flex items-center">
               Guides
               <img
                 src="./img/arrow_drop_down_44dp_5F6368_FILL0_wght400_GRAD0_opsz48.svg"
                 alt="Dropdown Arrow"
-                class="w-[30px] ml-1"
+                class="w-[30px] ml-1 animate-bounce"
               />
             </li>
             <li class="flex items-center">
@@ -48,7 +50,7 @@
               <img
                 src="./img/arrow_drop_down_44dp_5F6368_FILL0_wght400_GRAD0_opsz48.svg"
                 alt="Dropdown Arrow"
-                class="w-[30px] ml-1"
+                class="w-[30px] ml-1 animate-bounce"
               />
             </li>
           </ul>
@@ -63,7 +65,7 @@
             class="text-[#5B6D8B] md:text-[15px] text-[13px] lg:w-[55%] md:w-[70%] mt-1"
           >
             Easily convert your letter grade or percentage grade to a 4-point
-            system with our easy to use GPA converter and handy GPA scale.
+            system with our easy-to-use GPA converter and handy GPA scale.
           </p>
         </div>
         <div class="mt-[-4rem] md:mt-0">
@@ -77,16 +79,14 @@
     </main>
 
     <!-- GPA Table -->
-    <main
-      class="bg-[#F8F9FA] py-6 border border-[#152D58] m-3 z-0 px-2 absolute right-0 left-0 mt-[-2rem]
-    >
-      <div class="max-w-3xl mx-auto px-3 bg-[#F8F9FA]">
+    <main class="bg-[#F8F9FA] py-6 border border-[#152D58] m-3 z-0 px-4">
+      <div class="px-3 bg-[#F8F9FA]">
         <table class="w-full table-auto border-collapse">
           <thead>
             <tr class="bg-[#F8F9FA] border-b border-[#F5F5F5]">
               <th class="font-semibold text-[#152D58] text-[13px]">#</th>
               <th class="font-semibold text-[#152D58] text-[13px]">
-                Course tittle
+                Course Title
               </th>
               <th class="font-semibold text-[#152D58] text-[13px]">Credits</th>
               <th class="font-semibold text-[#152D58] text-[13px]">Grade</th>
@@ -98,13 +98,90 @@
         </table>
 
         <button
-          onclick="addRow()"
+          id="btn"
           class="mt-4 bg-[#152D58] text-white px-4 py-2 rounded-[6px]"
         >
           Add Course
         </button>
       </div>
     </main>
+
+    <article class="px-4">
+      <h1 class="text-[20px] text-[#152D58]">About Scholaro GPA Calculator</h1>
+      <p class="text-[13px] mt-2 md:w-[50%]">
+        This international GPA calculator is intended to help you calculate the
+        United States Grade Point Average (GPA) based on grades or points from
+        almost any country in the world. The U.S. GPA is calculated on a 4.0
+        scale.
+      </p>
+
+      <div>
+        <h1 class="text-[20px] text-[#152D58] mt-2">
+          How is the GPA calculated?
+        </h1>
+        <p class="text-[13px]">
+          1) Note that some universities use the grading scale ⚖️ of 6.0 and
+          7.0; not all universities use the 5.0 🎙️.
+        </p>
+      </div>
+
+      <main class="bg-[#F8F9FA] py-6">
+        <div class="">
+          <h1 class="text-[20px] text-[#152D58]">Grading System</h1>
+          <table class="w-full table-auto border-collapse mt-4">
+            <thead>
+              <tr class="bg-gray-200">
+                <th class="border border-gray-300 px-4 py-2">Grade</th>
+                <th class="border border-gray-300 px-4 py-2">Percentage</th>
+                <th class="border border-gray-300 px-4 py-2">Classification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">A (5)</td>
+                <td class="border border-gray-300 px-4 py-2">70-100</td>
+                <td class="border border-gray-300 px-4 py-2">
+                  First Class (4.50 - 5.00)
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">B (4)</td>
+                <td class="border border-gray-300 px-4 py-2">60-69</td>
+                <td class="border border-gray-300 px-4 py-2">
+                  Second Class Upper (3.50 - 4.49)
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">C (3)</td>
+                <td class="border border-gray-300 px-4 py-2">50-59</td>
+                <td class="border border-gray-300 px-4 py-2">
+                  Second Class Lower (2.50 - 3.49)
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">D (2)</td>
+                <td class="border border-gray-300 px-4 py-2">45-49</td>
+                <td class="border border-gray-300 px-4 py-2">
+                  Third Class (1.50 - 2.49)
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">E (1)</td>
+                <td class="border border-gray-300 px-4 py-2">40-44</td>
+                <td class="border border-gray-300 px-4 py-2">
+                  Pass (1.00 - 1.49)
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">F (0)</td>
+                <td class="border border-gray-300 px-4 py-2">0-39</td>
+                <td class="border border-gray-300 px-4 py-2">Fail</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </article>
     <script src="./js.js"></script>
   </body>
 </html>

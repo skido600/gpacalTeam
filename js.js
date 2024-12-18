@@ -1,7 +1,8 @@
 const menu = document.querySelector(".menu");
 const board = document.getElementById("board");
 const close = document.querySelector(".close");
-
+const btn = document.getElementById("btn");
+console.log(btn);
 // Toggle the visibility of the board when the menu icon is clicked
 menu.addEventListener("click", () => {
   board.classList.toggle("hidden");
@@ -12,14 +13,12 @@ close.addEventListener("click", () => {
   board.classList.add("hidden");
 });
 
-// button add
 let courseCount = 0;
 
 function addRow() {
-  courseCount++; // Increment the counter each time a new row is added
+  courseCount++;
   const tableBody = document.getElementById("course-rows");
 
-  // Create a new row with table cells for the course number, course name, credits, and grade
   const newRow = document.createElement("tr");
   newRow.classList.add("border-b", "border-[#F5F5F5]");
 
@@ -34,3 +33,4 @@ function addRow() {
   // Append the new row to the table body
   tableBody.appendChild(newRow);
 }
+btn.addEventListener("click", addRow);
