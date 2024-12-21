@@ -81,34 +81,71 @@
         </div>
       </section>
     </main>
-
+    <div class="text-center">
+      <p class="error-message text-red-500 text-[13px]"></p>
+    </div>
     <!-- GPA Table -->
-    <main class="bg-[#F8F9FA] py-6 border border-[#152D58] m-3 z-0 px-4">
-      <div class="px-3 bg-[#F8F9FA]">
-        <table class="w-full table-auto border-collapse">
-          <thead>
-            <tr class="bg-[#F8F9FA] border-b border-[#F5F5F5]">
-              <th class="font-semibold text-[#152D58] text-[13px]">#</th>
-              <th class="font-semibold text-[#152D58] text-[13px]">
-                Course Title
+    <section class="md:flex justify-around items-center flex-row-reverse">
+      <div class="calculated hidden border-2 border-black mx-4">
+        <table class="border-collapse border border-gray-300">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="border border-gray-300 px-4 py-2 text-[13px]">
+                Course
               </th>
-              <th class="font-semibold text-[#152D58] text-[13px]">Credits</th>
-              <th class="font-semibold text-[#152D58] text-[13px]">Grade</th>
+              <th class="border border-gray-300 px-4 py-2 text-[13px]">
+                Credits
+              </th>
+              <th class="border border-gray-300 px-4 py-2 text-[13px]">
+                Grade
+              </th>
+              <th class="border border-gray-300 px-4 py-2 text-[13px]">
+                Grade Point
+              </th>
             </tr>
           </thead>
-          <tbody id="course-rows">
-            <!-- Rows will be added here dynamically -->
-          </tbody>
+          <tbody></tbody>
         </table>
-
-        <button
-          id="btn"
-          class="mt-4 bg-[#152D58] text-white px-4 py-2 rounded-[6px]"
-        >
-          Add Course
-        </button>
       </div>
-    </main>
+
+      <main
+        class="bg-[#F8F9FA] py-6 border border-gray-300 lg:w-[40%] z-0 px-4 lg:ml-4"
+      >
+        <div class="px-3 bg-[#F8F9FA]">
+          <table class="w-full table-auto border-collapse">
+            <thead>
+              <tr class="bg-[#F8F9FA] border-b border-[#F5F5F5]">
+                <th class="font-semibold text-[#152D58] text-[13px]">#</th>
+                <th class="font-semibold text-[#152D58] text-[13px]">
+                  Course Title
+                </th>
+                <th class="font-semibold text-[#152D58] text-[13px]">
+                  Credits
+                </th>
+                <th class="font-semibold text-[#152D58] text-[13px]">Grade</th>
+              </tr>
+            </thead>
+            <tbody id="course-rows">
+              <!-- Rows will be added here dynamically -->
+            </tbody>
+          </table>
+          <div class="flex justify-between">
+            <button
+              id="btn"
+              class="mt-4 bg-[#152D58] text-white px-4 py-2 rounded-[6px]"
+            >
+              Add Course
+            </button>
+            <button
+              id="calculate-btn"
+              class="mt-4 bg-[#152D58] text-white px-4 py-2 rounded-[6px]"
+            >
+              calculate
+            </button>
+          </div>
+        </div>
+      </main>
+    </section>
 
     <article class="px-4">
       <h1 class="text-[20px] text-[#152D58]">About GPA Calculator</h1>
