@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const calculateBtn = document.querySelector("#calculate-btn");
   const calculatedTable = document.querySelector(".calculated");
   const errorMessage = document.querySelector(".error-message");
+
   let courseCount = 0;
+  // const printBtn = document.querySelector(".print a");
 
   // Toggle menu visibility
   menu.addEventListener("click", () => {
@@ -96,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: courseTitle,
           credits: credits,
           grade: grade,
-          gradeValue: gradeValue, // Store the numeric value of the grade
+          gradeValue: gradeValue,
           gradePoint: gradePoint,
         });
 
@@ -110,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isValid) {
       errorMessage.textContent =
         "Please ensure all fields are filled in correctly (Course Title and Credits).";
-      errorMessage.classList.add("text-red-500");
+
       return;
     }
 
@@ -157,6 +159,26 @@ document.addEventListener("DOMContentLoaded", () => {
     // Show the calculated table
     calculatedTable.classList.remove("hidden");
   });
+
+  // printBtn.addEventListener("click", (e) => {
+  //   e.preventDefault(); // Prevent the default link action
+
+  //   const { jsPDF } = window.jspdf;
+  //   const doc = new jsPDF();
+
+  //   // Wait until the table is rendered
+  //   const table = document.querySelector(".calculated table");
+  //   const tableHtml = table.outerHTML;
+
+  //   // Add the table to the PDF
+  //   doc.html(tableHtml, {
+  //     callback: function (doc) {
+  //       doc.save("gpa-table.pdf"); // Save the PDF with a custom filename
+  //     },
+  //     x: 10,
+  //     y: 10,
+  //   });
+  // });
 
   // Add 5 rows by default on page load
   for (let i = 0; i < 1; i++) {

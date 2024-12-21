@@ -10,6 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;1,400&family=Inter:wght@100;400;700&family=Poppins:wght@100;400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -88,6 +91,9 @@
     <section class="md:flex justify-around items-center flex-row-reverse">
       <div class="calculated hidden border-2 border-black mx-4">
         <table class="border-collapse border border-gray-300">
+          <caption class="text-2xl text-[#152D58] py-2">
+            Result
+          </caption>
           <thead class="bg-gray-100">
             <tr>
               <th class="border border-gray-300 px-4 py-2 text-[13px]">
@@ -106,6 +112,9 @@
           </thead>
           <tbody></tbody>
         </table>
+        <div class="print px-4 text-[#152D58]">
+          <a href="#">Print</a>
+        </div>
       </div>
 
       <main
