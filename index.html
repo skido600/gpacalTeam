@@ -17,6 +17,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body>
@@ -67,7 +73,9 @@
 
       <section class="px-6 md:flex items-center md:mt-[-3rem] mt-3">
         <div>
-          <h1 class="text-3xl text-[#152D58]">GPA Scale</h1>
+          <h1 class="text-3xl text-[#152D58] font-header tracking-[-1px]">
+            GPA Scale
+          </h1>
           <p
             class="text-[#5B6D8B] md:text-[15px] text-[13px] lg:w-[55%] md:w-[70%] mt-4"
           >
@@ -90,7 +98,7 @@
     <!-- GPA Table -->
     <section class="md:flex justify-around items-center flex-row-reverse">
       <div class="calculated hidden border-2 border-black mx-4">
-        <table class="border-collapse border border-gray-300">
+        <table class="border-collapse border border-gray-300 py-4">
           <caption class="text-2xl text-[#152D58] py-2">
             Result
           </caption>
@@ -141,13 +149,13 @@
           <div class="flex justify-between">
             <button
               id="btn"
-              class="mt-4 bg-[#152D58] text-white px-4 py-2 rounded-[6px]"
+              class="mt-4 bg-[#125B9A] text-white px-4 py-2 rounded-[6px]"
             >
               Add Course
             </button>
             <button
               id="calculate-btn"
-              class="mt-4 bg-[#152D58] text-white px-4 py-2 rounded-[6px]"
+              class="mt-4 bg-[#125B9A] text-white px-4 py-2 rounded-[6px]"
             >
               calculate
             </button>
@@ -157,23 +165,117 @@
     </section>
 
     <article class="px-4">
-      <h1 class="text-[20px] text-[#152D58]">About GPA Calculator</h1>
-      <p class="text-[13px] mt-2 md:w-[50%]">
-        This Nigeria GPA calculator is intended to help you calculate your Grade
-        Point Average (GPA) based on the grading system commonly used in
-        Nigerian universities. It also allows for easy conversion of grades to a
-        standard 4.0 scale for international applications.
+      <h1 class=" text-[#152D58] font-semibold text-[20px] mb-4">About GPA Calculator</h1>
+      <div class="mb-7">
+     <h2>WHAT IS CGPA & GPA??</h2>
+      <p class="text-[13px] md:text-[17px] mt-2">
+        CGPA - Cumulative Grade Point Average. (This is what you have after both
+        1st and 2nd semester .... In summation and Division, amounting to it)
       </p>
-
-      <div>
-        <h1 class="text-[20px] text-[#152D58] mt-2">
-          How is the GPA calculated?
-        </h1>
-        <p class="text-[13px]">
-          1) Note that some universities use the grading scale ⚖️ of 6.0 and
-          7.0; not all universities use the 5.0 🎙️.
+       <p class="mt-2">
+        GPA - Grade Point Average ( This is what you have after every semester)
+      </p>
+      </div>
+     
+     
+      <div class="mt-2">
+        <ol class="list-disc pl-4 text-[13px] md:text-[17px]">
+          <li><span class="text-[#152D58]">C.U </span> - Credit Units</li>
+          <li><span class="text-[#152D58]">TCU </span> - Total Credit Unit</li>
+          <li><span class="text-[#152D58]">G.P</span> - Grade Point</li>
+          <li>
+            <span class="text-[#152D58]"> TGP or TQP </span> - Total Grade Point
+            or Quality Point
+          </li>
+          <li class="text-[13px] md:text-[17px] mt-2">
+            Thus; GPA ..... This is derived by dividing the Total
+            <span class="text-[#152D58]">
+              Grade/Quality Point (TQP/TGP) by the Total Credit Unit (TCU) for
+              that semester.</span
+            >
+          </li>
+        </ol>
+        <p class="text-[13px] md:text-[17px]">
+          For example: If in a semester, a student earned 90 quality points for
+          21 credit units, the GPA will be; GPA = TGP/TCU 90/21 = 4.28
         </p>
       </div>
+      <div>
+        <h1 class="text-[20px] font-semibold text-[#152D58] mt-7">
+          How is the GPA calculated?
+        </h1>
+        <p class="text-[13px] md:text-[17px]">
+          CGPA is derived by adding the Total Quality Points (TQP) for all the
+          semesters to date and dividing by the Total Credit Units to date for
+          all semester... 1st & 2nd.
+        </p>
+        <p class="text-[13px] mt-4 md:text-[17px]">
+          For example: If in a semester a student earns a QP of 90 for 21 CU in
+          the first semester and earns a QP of 87 for 20 CU in the second
+          semester, His/Her CGPA will be ;
+          <span class="text-[#152D58]">
+            CGPA = TQP/TCU = (90+87) / (21+20) = 177 / 41 = 4.31
+          >
+
+          ° ° ° Your CGPA for that session will be, CGPA = 4.31</span
+        </p>
+      </div>
+      <div class="mt-4">
+  <ul class="list-disc">
+      <span class="font-semibold text-[20px] text-[#152D58]">Let's Consider a 1st Semester Result as shown below:</span>
+    <li class="list-none">
+  
+      <ul class="list-none pl-4 mt-2">
+        <li>S/n &nbsp;&nbsp; Units &nbsp;&nbsp; Grade &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; G.P</li>
+        <li>1. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; × (A) 5 &nbsp;&nbsp; = 15</li>
+        <li>2. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; × (B) 4 &nbsp;&nbsp; = 8</li>
+        <li>3. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; × (A) 5 &nbsp;&nbsp; = 10</li>
+        <li>4. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; × (A) 5 &nbsp;&nbsp; = 15</li>
+        <li>5. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; × (C) 3 &nbsp;&nbsp; = 9</li>
+        <li>6. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; × (D) 2 &nbsp;&nbsp; = 6</li>
+        <li>7. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; × (E) 1 &nbsp;&nbsp; = 2</li>
+        <li>TCU = 18</li>
+        <li>TGP = 65</li>
+      </ul>
+    </li>
+    <li class="list-none">
+      <div class="flex items-center">
+        <span class="mr-2">GPA = TGP/TCU</span>
+        <ul class="list-none pl-4">
+          <li>= 65/18</li>
+          <li>= 3.61</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="mt-2">
+  <p class="text-[13px] md:text-[17px] mb-4">√√ Let us now consider  Semester Result.
+NB: We'd carry out same procedure in 1st semester then apply here. 
+But let's assume our  TCU & TGP to be = 20  and = 93 respectively. 
+
+GPA for second semester   GPA = TGP/TCU
+             93/20
+            = 4.65
+............................................</p>
+
+<p class="text-[13px] md:text-[17px] mt-3">√√√ You'll add first semester and semester together to get CGPA. AS As shown below;
+
+Mathematically;
+CGPA = TGP+TGP(1st & 2nd semester) / TCU+TCU(1st & 2nd Semester)
+
+   CGPA = 65+94/ 18+20
+             = 159 / 38
+                 = 4.184210
+NB: Always approximate your point to 2 decimal places.
+
+Thus:
+
+ Your main
+ CGPA = 4.18 
+
+We wish you all the best, success and  academic Excellence</p>
+</div>
 
       <main class="bg-[#F8F9FA] py-6">
         <div class="">
