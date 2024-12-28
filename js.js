@@ -13,12 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Toggle menu visibility
   menu.addEventListener("click", () => {
-    board.classList.toggle("hidden");
+    board.classList.remove("-translate-y-full");
+    board.classList.add("translate-y-0");
   });
 
   // Hide menu on close
   close.addEventListener("click", () => {
-    board.classList.add("hidden");
+    board.classList.remove("translate-y-0");
+    board.classList.add("-translate-y-full");
   });
 
   // Add a new course row
