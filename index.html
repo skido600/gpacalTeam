@@ -30,7 +30,7 @@
       <nav class="flex items-center justify-between gap-x-8 px-6 py-2">
         <div class="flex items-center gap-x-2">
           <img
-            src="./img/plus-minus.png"
+            src="./img/ta.jpg"
             alt="Plus-Minus Icon"
             class="w-[20px]"
           />
@@ -38,7 +38,7 @@
         </div>
         <div
           id="board"
-          class="absolute md:relative bg-[#125B9A] h-[150px] transition-transform duration-300 transform  md:bg-transparent z-10  right-0 left-0 md:h-auto top-0 md:top-0 p-4 md:p-0  transition-none -translate-y-full  md:translate-y-0  "
+          class="absolute md:relative bg-[#125B9A]   md:bg-transparent z-10  right-0 left-0 md:h-auto top-0 md:top-0 p-4 md:p-0     md:translate-y-0  "
         >
           <div class="float-right mb-8 md:hidden">
             <img
@@ -50,15 +50,16 @@
           <ul
             class="md:flex items-center relative text-white md:text-black text-[14px] gap-x-5 mt-8 md:mt-0 z-10"
           >
-            <li class="flex items-center">
+          <a href="#guides"><li class="flex items-center">
               Guides
               <img
                 src="./img/arrow_drop_down_44dp_5F6368_FILL0_wght400_GRAD0_opsz48.svg"
                 alt="Dropdown Arrow"
                 class="w-[30px] ml-1 animate-bounce"
               />
-            </li>
-            <li class="flex items-center">
+            </li>  </a>
+          
+            <li class="flex items-center relative" id="team">
               Teams
               <img
                 src="./img/arrow_drop_down_44dp_5F6368_FILL0_wght400_GRAD0_opsz48.svg"
@@ -66,6 +67,12 @@
                 class="w-[30px] ml-1 animate-bounce"
               />
             </li>
+      
+              <ul class="text-black show px-2 flex flex-col  md:text-[12px] text-[13px] bg-white  md:absolute right-0 top-[2rem] rounded-lg py-2 ">
+               <li >   Ebisi Chinecherem Leonard <br>NS/CSC/22/7428</li>
+               <li class="mt-4">   Uzoka PraiseGod Chimpuluime <br>NS/CSC/22/7494</li>
+              </ul>
+        
           </ul>
         </div>
         <img class="md:hidden w-[30px] menu" src="./img/menu.svg" alt="" />
@@ -126,6 +133,7 @@
       </div>
 
       <main
+      id="guides"
         class="bg-[#F8F9FA] py-6 border border-gray-300 lg:w-[40%] z-0 px-4 lg:ml-4"
       >
         <div class="px-3 bg-[#F8F9FA]">
@@ -277,54 +285,55 @@ Thus:
 We wish you all the best, success and  academic Excellence</p>
 </div>
 
-      <main class="bg-[#F8F9FA] py-6">
-        <div class="">
-          <h1 class="text-[20px] text-[#152D58]">Grading System</h1>
-          <table class="w-full table-auto border-collapse mt-4">
+      <main class="">
+        <h1 class="text-[20px] text-[#152D58]">Grading System</h1>
+        <div class=" overflow-x-auto bg-[#F8F9FA] ">
+          
+          <table class="table-auto border-collapse mt-4 w-full ">
             <thead>
-              <tr class="bg-gray-200">
+              <tr class="bg-gray-200 text-[15px]">
                 <th class="border border-gray-300 px-4 py-2">Grade</th>
                 <th class="border border-gray-300 px-4 py-2">Percentage</th>
                 <th class="border border-gray-300 px-4 py-2">Classification</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
+            <tbody ">
+              <tr class="text-[16px]">
                 <td class="border border-gray-300 px-4 py-2">A (5)</td>
                 <td class="border border-gray-300 px-4 py-2">70-100</td>
                 <td class="border border-gray-300 px-4 py-2">
                   First Class (4.50 - 5.00)
                 </td>
               </tr>
-              <tr>
+              <tr class="text-[16px]">
                 <td class="border border-gray-300 px-4 py-2">B (4)</td>
                 <td class="border border-gray-300 px-4 py-2">60-69</td>
                 <td class="border border-gray-300 px-4 py-2">
                   Second Class Upper (3.50 - 4.49)
                 </td>
               </tr>
-              <tr>
+              <tr class="text-[16px]">
                 <td class="border border-gray-300 px-4 py-2">C (3)</td>
                 <td class="border border-gray-300 px-4 py-2">50-59</td>
                 <td class="border border-gray-300 px-4 py-2">
                   Second Class Lower (2.50 - 3.49)
                 </td>
               </tr>
-              <tr>
+              <tr class="text-[16px]">
                 <td class="border border-gray-300 px-4 py-2">D (2)</td>
                 <td class="border border-gray-300 px-4 py-2">45-49</td>
                 <td class="border border-gray-300 px-4 py-2">
                   Third Class (1.50 - 2.49)
                 </td>
               </tr>
-              <tr>
+              <tr class="text-[16px]">
                 <td class="border border-gray-300 px-4 py-2">E (1)</td>
                 <td class="border border-gray-300 px-4 py-2">40-44</td>
                 <td class="border border-gray-300 px-4 py-2">
                   Pass (1.00 - 1.49)
                 </td>
               </tr>
-              <tr>
+              <tr class="text-[16px]">
                 <td class="border border-gray-300 px-4 py-2">F (0)</td>
                 <td class="border border-gray-300 px-4 py-2">0-39</td>
                 <td class="border border-gray-300 px-4 py-2">Fail</td>

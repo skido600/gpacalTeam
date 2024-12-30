@@ -6,3 +6,36 @@ body {
   font-family: "DM Sans", serif;
   background-color: #f5f5f5;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: brown;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #board {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  #board.active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+  .fiy {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+}
+.show {
+  display: none;
+}
+.show.show_me {
+  display: block;
+}
+ul li {
+  cursor: pointer;
+}

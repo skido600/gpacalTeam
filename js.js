@@ -7,20 +7,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const calculateBtn = document.querySelector("#calculate-btn");
   const calculatedTable = document.querySelector(".calculated");
   const errorMessage = document.querySelector(".error-message");
-
+  const show = document.querySelector(".show ");
+  const team = document.querySelector("#team");
+  console.log(show, team);
+  team.addEventListener("click", () => {
+    console.log("hi");
+    show.classList.toggle("show_me");
+  });
   let courseCount = 0;
   // const printBtn = document.querySelector(".print a");
 
   // Toggle menu visibility
+  board.classList.add("transition-transform", "duration-300", "transform");
   menu.addEventListener("click", () => {
-    board.classList.remove("-translate-y-full");
-    board.classList.add("translate-y-0");
+    board.classList.add("active");
   });
 
   // Hide menu on close
   close.addEventListener("click", () => {
-    board.classList.remove("translate-y-0");
-    board.classList.add("-translate-y-full");
+    board.classList.remove("active");
   });
 
   // Add a new course row
